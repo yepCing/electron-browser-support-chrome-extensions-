@@ -244,9 +244,8 @@ class Browser {
       this.session,
       path.join(__dirname, "../../extensions")
     );
-    console.log(process.env.WEBPACK_DEV_SERVER_UR, "=============");
-    // this.createWindow({ initialUrl: newTabUrl });
-    this.createWindow({ initialUrl: "https://www.baidu.com" });
+    this.createWindow({ initialUrl: newTabUrl });
+    // this.createWindow({ initialUrl: "https://www.baidu.com" });
   }
 
   initSession() {
@@ -268,8 +267,8 @@ class Browser {
         width: 1280,
         height: 720,
         frame: false,
-        titleBarStyle: process.platform === "darwin" ? "hiddenInset" : "hidden",
-        useContentSize: true,
+        // titleBarStyle: process.platform === "darwin" ? "hiddenInset" : "hidden",
+        // useContentSize: true,
 
         webPreferences: {
           sandbox: true,
